@@ -13,19 +13,23 @@
 
   <div class="mb-6">
         <%= form.label :customer_id, class: label_class %>
-          <%= form.text_field :customer_id, class: input_class %>
+           <%= form.select :customer_id, options_from_collection_for_select(
+Customer.all, 'id', 'customer_name', selected = transaction_report.customer_id), class: label_class %> 
       </div>
   <div class="mb-6">
         <%= form.label :order_id, class: label_class %>
-          <%= form.text_field :order_id, class: input_class %>
+            <%= form.select :order_id, options_from_collection_for_select(
+Order.all, 'id', 'order_purchase_date', selected = transaction_report.order_id), class: label_class %> 
       </div>
   <div class="mb-6">
         <%= form.label :product_id, class: label_class %>
-          <%= form.text_field :product_id, class: input_class %>
+            <%= form.select :product_id, options_from_collection_for_select(
+Product.all, 'id', 'product_name', selected = transaction_report.product_id), class: label_class %> 
       </div>
   <div class="mb-6">
         <%= form.label :payment_id, class: label_class %>
-          <%= form.text_field :payment_id, class: input_class %>
+          <%= form.select :payment_id, options_from_collection_for_select(
+Payment.all, 'id', 'payment_method', selected = transaction_report.payment_id), class: label_class %> 
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>
