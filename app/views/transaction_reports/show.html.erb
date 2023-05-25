@@ -1,0 +1,33 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Transaction_report</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to transaction_reports_path, class: button_class(theme: "transparent") do %>
+      All Transaction_reports
+      <% end %>
+      <%= link_to edit_transaction_report_path(@transaction_report), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Customer:</p>
+        <p><%= @transaction_report.customer %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Order:</p>
+        <p><%= @transaction_report.order %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Product:</p>
+        <p><%= @transaction_report.product %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Payment:</p>
+        <p><%= @transaction_report.payment %></p>
+      </li>
+  </ul>
+</div>

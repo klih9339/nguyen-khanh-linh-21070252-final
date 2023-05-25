@@ -1,0 +1,38 @@
+<%= form_with(model: transaction_report) do |form| %>
+<% if transaction_report.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(transaction_report.errors.count, "error") %> prohibited this transaction_report from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% transaction_report.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :customer_id, class: label_class %>
+          <%= form.text_field :customer_id, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :order_id, class: label_class %>
+          <%= form.text_field :order_id, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :product_id, class: label_class %>
+          <%= form.text_field :product_id, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :payment_id, class: label_class %>
+          <%= form.text_field :payment_id, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if transaction_report.persisted? %>
+<%= link_to "Cancel", transaction_report, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", transaction_reports_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

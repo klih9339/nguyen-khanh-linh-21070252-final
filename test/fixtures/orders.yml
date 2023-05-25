@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_purchase_date: 2023-05-25 17:01:57
+  total: 1.5
+  product: one
+  customer: one
+
+two:
+  order_purchase_date: 2023-05-25 17:01:57
+  total: 1.5
+  product: two
+  customer: two
