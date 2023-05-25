@@ -21,13 +21,15 @@
       </div>
   <div class="mb-6">
         <%= form.label :product_id, class: label_class %>
-         <%= form.select :product_id, options_from_collection_for_select(
-Product.all, 'id', 'product_name', selected = order.product_id), class: label_class %> 
+          <%= form.text_field :product_id, class: input_class %>
       </div>
   <div class="mb-6">
         <%= form.label :customer_id, class: label_class %>
-               <%= form.select :customer_id, options_from_collection_for_select(
-Customer.all, 'id', 'customer_name', selected = order.customer_id), class: label_class %> 
+          <%= form.text_field :customer_id, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :employee_id, class: label_class %>
+          <%= form.text_field :employee_id, class: input_class %>
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>

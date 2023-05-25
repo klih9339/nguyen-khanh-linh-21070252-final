@@ -15,6 +15,7 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "New order"
 
     fill_in "Customer", with: @order.customer_id
+    fill_in "Employee", with: @order.employee_id
     fill_in "Order purchase date", with: @order.order_purchase_date
     fill_in "Product", with: @order.product_id
     fill_in "Total", with: @order.total
@@ -29,6 +30,7 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "Edit this order", match: :first
 
     fill_in "Customer", with: @order.customer_id
+    fill_in "Employee", with: @order.employee_id
     fill_in "Order purchase date", with: @order.order_purchase_date
     fill_in "Product", with: @order.product_id
     fill_in "Total", with: @order.total

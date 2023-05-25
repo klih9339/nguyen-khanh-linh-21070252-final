@@ -23,11 +23,15 @@
       </li>
       <li>
         <p class="font-semibold">Product:</p>
-        <p><%= @order.product.product_name %></p>
+        <p><%= @order.product %></p>
       </li>
       <li>
         <p class="font-semibold">Customer:</p>
-        <p><%= @order.customer.customer_name %></p>
+        <p><%= @order.customer %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Employee:</p>
+        <p><%= @order.employee %></p>
       </li>
   </ul>
 </div>
