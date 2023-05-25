@@ -1,14 +1,14 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  order_purchase_date: 2023-05-26 00:13:08
+  order_purchase_date: 2023-05-26 00:56:19
   total: 1.5
   product: one
   customer: one
   employee: one
 
 two:
-  order_purchase_date: 2023-05-26 00:13:08
+  order_purchase_date: 2023-05-26 00:56:19
   total: 1.5
   product: two
   customer: two
