@@ -21,23 +21,20 @@
       </div>
   <div class="mb-6">
         <%= form.label :product_id, class: label_class %>
-           <%= form.select :product_id,options_from_collection_for_select(
-Product.all, 'id', 'product_name', selected = transaction_report.product_id), class: label_class %> 
-      </div>
-
+           <%= form.select :product_id,options_from_collection_for_select(Product.all, 'id', 'product_name', selected = order.product_id), class: label_class %> 
+  
       </div>
 
   <div class="mb-6">
         <%= form.label :customer_id, class: label_class %>
           
-          <%= form.select :customer_id,options_from_collection_for_select(
-Customer.all, 'id', 'customer_name', selected = transaction_report.customer_id), class: label_class %> 
-      </div>
+          <%= form.select :customer_id,options_from_collection_for_select(Customer.all, 'id', 'customer_name', selected = order.customer_id), class: label_class %> 
+    
       </div>
   <div class="mb-6">
         <%= form.label :employee_id, class: label_class %>
-         options_from_collection_for_select(
-Employee.all, 'id', 'employee_name', selected = transaction_report.employee_id), class: label_class %> 
+        <%= form.select :employee_id,
+        options_from_collection_for_select(Employee.all, 'id', 'employee_name', selected = order.employee_id), class: label_class %> 
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>
